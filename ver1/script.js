@@ -16,23 +16,7 @@ if (readMoreBtn) {
     });
 }
 
-/*
-document.getElementById("readMoreBtn").addEventListener("click", function() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("readMoreBtn");
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read More"; 
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read Less"; 
-        moreText.style.display = "inline";
-    }
-});
-*/
 function goBack() {
     window.history.back();
 }
@@ -92,19 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Swiper code if needed...
 });
-
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navbar = document.querySelector("#navbar ul");
-
-    if (hamburger && navbar) {
-        hamburger.addEventListener("click", () => {
-            navbar.classList.toggle("active");
-        });
-    }
-});
-*/
 
       let currentIndex = 0;
     const slides = document.getElementById("slides");
