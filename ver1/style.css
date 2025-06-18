@@ -779,18 +779,140 @@ footer .copyright {
   font-weight: 500;
 }
 
-.hamburger{
-  display: none;
+.certificate-section {
+  margin-top: 40px;
+  padding: 0 20px;
+  text-align: center;
 }
-.nav-bar ul{
-  display: flex;
+
+.certificate-section h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
-.nav-bar ul li a{
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.certificate-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.certificate-item:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-item img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.certificate-item a {
   display: block;
-  color: #fefefe;
-  font-size: 20px;
-  padding: 10px 25px;
-  border-radius:50px; 
-  transition:0.2s;
-  margin:0 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: bold;
+  font-size: 0.95rem;
 }
+
+@media (max-width: 480px) {
+  .certificate-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-item img {
+    max-height: 220px;
+  }
+
+  .certificate-item a {
+    font-size: 0.9rem;
+  }
+}
+/* Center logo in nav with image */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #0077b5;
+  padding: 10px 0;
+}
+
+.ganesha-icon {
+  width: 40px;
+  height: auto;
+  align-items: center;
+  margin: 0 10px;
+}
+
+/* Header structure */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* Mobile hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0077b5;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
